@@ -12,9 +12,10 @@
   <!-- load the default "ON" controllers -->
   <node name="controller_spawner" pkg="controller_manager" type="controller_manager" respawn="false"
         output="screen" args="spawn
-                                         gazebo_panda/effort_joint_position_controller
                                          gazebo_panda/joint_state_controller
+                                         gazebo_panda/arm_trajectory_controller
                                          " />
+                                         <!-- gazebo_panda/effort_joint_position_controller -->
   <!-- load the default "OFF" controllers -->
   <node name="controller_spawner_stopped" pkg="controller_manager" type="controller_manager" respawn="false"
        output="screen" args="load
